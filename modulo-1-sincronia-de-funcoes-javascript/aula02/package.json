@@ -1,0 +1,13 @@
+{
+  "name": "aula02",
+  "version": "1.0.0",
+  "description": "- Estado inicial, ainda não terminou ou ainda não foi rejeitada.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
