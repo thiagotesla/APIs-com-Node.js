@@ -27,5 +27,10 @@ describe('Suite de manipulação de Herois', () => {
 
         deepEqual(resultado, expected)
     })
+    it('DELETE: Deve excluir um heroi por id', async () => {
+        const expected = true
+        const resultado = await database.remover(DEFAULT_ITEM_CADASTRAR.id)
+        deepEqual(resultado, expected)
+    })
 
 })
