@@ -15,20 +15,26 @@ async function main(){
         const result = await service.obterPessoas('a')
         
         /* Usando forEach
-        const nomes = []
-        result.results.forEach(pessoa => {
-            nomes.push(pessoa.name)
-        })
+
+            const nomes = []
+            result.results.forEach(pessoa => {
+                nomes.push(pessoa.name)
+            })
+            
         */
 
-        /* Usando Map com a sintáse convencional 
-        const nomes = result.results.map(function (pessoa){
-            return pessoa.name
-        })
+        /* Usando Map com a sintáse convencional
+
+            const nomes = result.results.map(function (pessoa){
+                return pessoa.name
+            })
+
         */
 
         /* Usando Map com a sintáxe de flecha (arrow function)
-        const nomes = result.results.map(pessoa => pessoa.name)
+
+            const nomes = result.results.map(pessoa => pessoa.name)
+
         */
 
         const nomes = result.results.meuMap(function (pessoa, i){
