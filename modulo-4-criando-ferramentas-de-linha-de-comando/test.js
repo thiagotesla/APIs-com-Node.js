@@ -13,6 +13,12 @@ const DEFAULT_ITEM_CADASTRAR = {
     
 }
 
+const DEFAULT_ITEM_ATUALIZAR = {
+    nome: "Batman",
+    poder: "Dinheiro",
+    id: 1,
+}
+
 describe('Suite de manipulação de Herois', () => {
 
     it('CREATE: Deve cadastrar um heroi usando arquivos.', async () => {
@@ -27,10 +33,22 @@ describe('Suite de manipulação de Herois', () => {
 
         deepEqual(resultado, expected)
     })
+    it('UPDATE: Deve atualizar heroi por id', async () =>{
+        const expected = {
+            ...DEFAULT_ITEM_ATUALIZAR
+        }
+        const novosDados = {
+            nome: 'Batman',
+            poder: 'Dinheiro'
+        }
+        await database.atualizar(DEFAULT_ITEM_CADASTRAR.id, novosDados)
+        const resultado = await database.listar(DEFAULT_ITEM_CADASTRAR.id, expected)
+        deepEqual(resultado, [expected]) 
+    })
     it('DELETE: Deve excluir um heroi por id', async () => {
         const expected = true
         const resultado = await database.remover(DEFAULT_ITEM_CADASTRAR.id)
         deepEqual(resultado, expected)
     })
-
+    
 })
