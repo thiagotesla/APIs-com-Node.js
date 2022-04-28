@@ -27,6 +27,8 @@ async function main(){
         const {
             results 
         } = await obterPessoas('a')
+
+        // Usando o array.filter nativo
         // const familiaLars = results.filter(function (item){
         //     const result = item.name.toLowerCase().indexOf('lars') !== -1
         //     return result
