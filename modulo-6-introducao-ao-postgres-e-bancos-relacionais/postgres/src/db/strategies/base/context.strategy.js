@@ -13,6 +13,7 @@ class ContextEstrategy extends ICrud{
     read(query){
         return this._database.read(query)
     }
+    
     update(id, item){
         return this._database.update(id, item)
     }
