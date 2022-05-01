@@ -41,8 +41,8 @@ class Postgres extends ICrud {
         await this._herois.sync()
     }
 
-    create() {
-        console.log("Item Salvo em Postgres")
+    async create(item) {
+        return await this._herois.create(item)
     }
 
     async connect() {
