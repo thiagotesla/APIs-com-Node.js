@@ -12,7 +12,7 @@ describe('Postgres Strategy', function () {
     this.timeout(Infinity)
     this.beforeAll(async () => {
         await context.connect()
-        await context.create(MOCK_HEROI)
+
     })
 
     it('Deve verificar a conexão com o PostgreSQL', async () => {
