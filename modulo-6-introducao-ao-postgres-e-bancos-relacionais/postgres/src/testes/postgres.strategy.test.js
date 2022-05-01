@@ -4,8 +4,8 @@ const Context = require('../db/strategies/base/context.strategy')
 
 const context = new Context(new Postgres())
 const MOCK_HEROI = {
-    nome: 'SuperMan',
-    poder: 'Fechas'
+    nome: 'Super Man',
+    poder: 'Super força'
 }
 
 describe('Postgres Strategy', function () {
