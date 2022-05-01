@@ -6,7 +6,7 @@ const context = new Context(new Postgres())
 
 describe('Postgres Strategy', function () {
     this.timeout(Infinity)
-    it('Should grant PostgreSQL connection', async () =>{
+    it('Should verify PostgreSQL connection', async () =>{
         const result = await context.isConnected()
         assert.equal(result, true)
     })
