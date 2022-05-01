@@ -10,6 +10,10 @@ const MOCK_HEROI_CADASTRAR = {
 
 describe('Postgres Strategy', function () {
     this.timeout(Infinity)
+    this.beforeAll(async () => {
+        await context.connect()
+    })
+
     it('Should verify PostgreSQL connection', async () =>{
         const result = await context.isConnected()
         assert.equal(result, true)
